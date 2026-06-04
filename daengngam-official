@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติวัวชน</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+header{
+    background:#000;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+.hero{
+    height:100vh;
+    background:url('bull.jpg') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:30px;
+    border-radius:15px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:#1c1c1c;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.stat-box{
+    background:#222;
+    text-align:center;
+    padding:20px;
+    border-radius:15px;
+}
+
+.stat-box h2{
+    color:gold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th,
+table td{
+    border:1px solid #444;
+    padding:10px;
+    text-align:center;
+}
+
+table th{
+    background:gold;
+    color:black;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    background:black;
+    padding:20px;
+    margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="#home">หน้าแรก</a>
+<a href="#history">ประวัติ</a>
+<a href="#stats">สถิติการชน</a>
+<a href="#gallery">รูปภาพ</a>
+<a href="#contact">ติดต่อ</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>โหนดเพชรลำซิ่ง</h1>
+<p>ราชาวัวชนแห่งแดนใต้</p>
+<a href="#stats" class="btn">ดูสถิติ</a>
+</div>
+</section>
+
+<section id="history">
+<div class="container">
+<h1>ประวัติ</h1>
+
+<div class="card">
+<p><b>ชื่อ:</b> โหนดเพชรลำซิ่ง</p>
+<p><b>อายุ:</b> 5 ปี</p>
+<p><b>เจ้าของ:</b> ใส่ชื่อเจ้าของ</p>
+<p><b>ค่าย:</b> ใส่ชื่อค่าย</p>
+<p><b>ประวัติ:</b> เพิ่มรายละเอียดได้ตามต้องการ</p>
+</div>
+
+</div>
+</section>
+
+<section id="stats">
+<div class="container">
+<h1>สถิติการชน</h1>
+
+<div class="stats">
+
+<div class="stat-box">
+<h2>15</h2>
+<p>ชนะ</p>
+</div>
+
+<div class="stat-box">
+<h2>2</h2>
+<p>แพ้</p>
+</div>
+
+<div class="stat-box">
+<h2>1</h2>
+<p>เสมอ</p>
+</div>
+
+<div class="stat-box">
+<h2>83%</h2>
+<p>อัตราชนะ</p>
+</div>
+
+</div>
+
+<table>
+<tr>
+<th>ครั้ง</th>
+<th>วันที่</th>
+<th>คู่ชน</th>
+<th>ผล</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>10/01/2569</td>
+<td>ลังสาดนำโชค</td>
+<td>ชนะ</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>15/03/2569</td>
+<td>ดุกด้างเพชรทอง</td>
+<td>ชนะ</td>
+</tr>
+
+</table>
+
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<h1>คลังรูปภาพ</h1>
+
+<div class="gallery">
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h1>ติดต่อ</h1>
+
+<div class="card">
+<p>📞 08X-XXX-XXXX</p>
+<p>📘 Facebook : ชื่อเพจ</p>
+<p>📍 จังหวัด...</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 เว็บไซต์ประวัติวัวชน</p>
+</footer>
+
+</body>
+</html>
