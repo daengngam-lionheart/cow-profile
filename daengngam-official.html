@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ประวัติวัวชน</title>
+<title>ประวัติ แดงงามกล้ารณรงค์หัวใจสิงห์</title>
 
 <style>
 *{
@@ -16,11 +16,12 @@
 body{
     background:#111;
     color:white;
+    font-size: 15px;
 }
 
 header{
     background:#000;
-    padding:15px;
+    padding:12px;
     position:sticky;
     top:0;
     z-index:100;
@@ -29,52 +30,70 @@ header{
 nav{
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:15px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
+    font-size: 14px;
 }
 
 nav a:hover{
     color:gold;
 }
 
+/* ส่วนหัวปรับโทนสีแดงเข้มดุดันตามธีมวัวแดง */
 .hero{
-    height:100vh;
-    /* ปรับแต่งเพื่อให้รูปพื้นหลังแสดงผลพอดี ตรงกลาง และไม่ซ้ำซ้อน */
-    background: url('cow.jpg') center/cover no-repeat; 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background: #7a0000; 
+    padding: 30px 15px;
     text-align:center;
+    border-bottom: 2px solid gold;
 }
 
-.hero-content{
-    background:rgba(0,0,0,0.6);
-    padding:30px;
-    border-radius:15px;
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* รูปวัวขนาดเล็กกะทัดรัด พอดีหน้าจอมือถือ */
+.hero-profile-img {
+    width: 140px;          
+    height: 140px;         
+    border-radius: 50%;    
+    object-fit: cover;     
+    border: 3px solid gold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 .hero h1{
-    font-size:50px;
+    font-size: 24px;
+    color: white;
+    margin-top: 5px;
+}
+
+.hero p{
+    font-size: 14px;
+    color: #eee;
 }
 
 .btn{
     display:inline-block;
-    margin-top:15px;
-    padding:12px 25px;
+    margin-top: 5px;
+    padding:8px 20px;
     background:gold;
     color:black;
     text-decoration:none;
-    border-radius:10px;
+    border-radius:8px;
     font-weight:bold;
+    font-size: 14px;
 }
 
 section{
-    padding:60px 20px;
+    padding:30px 15px;
 }
 
 .container{
@@ -82,66 +101,88 @@ section{
     margin:auto;
 }
 
+section h1{
+    font-size: 20px;
+    border-bottom: 2px solid gold;
+    padding-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
 .card{
     background:#1c1c1c;
-    padding:20px;
-    border-radius:15px;
-    margin-top:20px;
+    padding:15px;
+    border-radius:10px;
+    margin-top:10px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.card ul {
+    padding-left: 20px;
+    margin-top: 5px;
 }
 
 .stats{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
 }
 
 .stat-box{
     background:#222;
     text-align:center;
-    padding:20px;
-    border-radius:15px;
+    padding:15px;
+    border-radius:10px;
 }
 
 .stat-box h2{
     color:gold;
+    font-size: 24px;
+}
+
+.stat-box p{
+    font-size: 13px;
 }
 
 table{
     width:100%;
     border-collapse:collapse;
-    margin-top:20px;
+    margin-top:15px;
+    font-size: 14px;
 }
 
 table th,
 table td{
     border:1px solid #444;
-    padding:10px;
+    padding:10px 5px;
     text-align:center;
 }
 
 table th{
-    background:gold;
-    color:black;
+    background: #7a0000;
+    color: white;
 }
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
 }
 
 .gallery img{
     width:100%;
-    aspect-ratio: 16/9; /* ล็อคอัตราส่วนรูปภาพให้สม่ำเสมอเท่ากัน */
-    object-fit: cover;   /* จัดรูปภาพให้พอดีกับกรอบโดยไม่ยืดหรือเบี้ยว */
-    border-radius: 10px;
+    aspect-ratio: 16/9; 
+    object-fit: cover;   
+    border-radius: 8px;
 }
 
 footer{
     text-align:center;
     background:black;
-    padding:20px;
-    margin-top:50px;
+    padding:15px;
+    margin-top:30px;
+    font-size: 12px;
 }
 </style>
 </head>
@@ -151,33 +192,44 @@ footer{
 <header>
 <nav>
 <a href="#home">หน้าแรก</a>
+<a href="#info">ข้อมูลทั่วไป</a>
 <a href="#history">ประวัติ</a>
-<a href="#stats">สถิติการชน</a>
-<a href="#gallery">รูปภาพ</a>
-<a href="#contact">ติดต่อ</a>
+<a href="#stats">สถิติ</a>
+<a href="#awards">ผลงาน</a>
 </nav>
 </header>
 
+<!-- ส่วนแสดงรูปเล็กสไตล์โปรไฟล์ พอดีจอมือถือ -->
 <section class="hero" id="home">
 <div class="hero-content">
-<h1>โหนดเพชรลำซิ่ง</h1>
-<p>ราชาวัวชนแห่งแดนใต้</p>
-<a href="#stats" class="btn">ดูสถิติ</a>
+    <!-- รูปภาพ cow.jpg ขนาดกะทัดรัด -->
+    <img src="cow.jpg" alt="แดงงามกล้ารณรงค์หัวใจสิงห์" class="hero-profile-img">
+    <h1>แดงงามกล้ารณรงค์หัวใจสิงห์</h1>
+    <p>ชน 2 ครั้ง ชนะ 2 เสมอ 0 แพ้ 0</p>
+    <a href="#stats" class="btn">ดูตารางชน</a>
+</div>
+</section>
+
+<section id="info">
+<div class="container">
+<h1>ข้อมูลทั่วไป</h1>
+<div class="card">
+<p><b>ชื่อ:</b> แดงงามกล้ารณรงค์หัวใจสิงห์</p>
+<p><b>เจ้าของ:</b> น้องต้นกล้า</p>
+<p><b>ค่าย:</b> ทุ่งนาเดือย</p>
+<p><b>อายุ:</b> 5-6 ปี</p>
+<p><b>สี:</b> สีแดง</p>
+<p><b>ลักษณะเขา:</b> เขาวง</p>
+</div>
 </div>
 </section>
 
 <section id="history">
 <div class="container">
 <h1>ประวัติ</h1>
-
 <div class="card">
-<p><b>ชื่อ:</b> โหนดเพชรลำซิ่ง</p>
-<p><b>อายุ:</b> 5 ปี</p>
-<p><b>เจ้าของ:</b> ใส่ชื่อเจ้าของ</p>
-<p><b>ค่าย:</b> ใส่ชื่อค่าย</p>
-<p><b>ประวัติ:</b> เพิ่มรายละเอียดได้ตามต้องการ</p>
+<p>เป็นลูกวัวเกิดที่บ้าน เห็นลักษณะเขาดีเลยเลี้ยงไว้ ต่อมาได้ฝึกซ้อมและเป็นวิชาทางชนจึงได้เริ่มเข้าสู่วงการวัวชน</p>
 </div>
-
 </div>
 </section>
 
@@ -186,80 +238,61 @@ footer{
 <h1>สถิติการชน</h1>
 
 <div class="stats">
-
-<div class="stat-box">
-<h2>15</h2>
-<p>ชนะ</p>
-</div>
-
 <div class="stat-box">
 <h2>2</h2>
-<p>แพ้</p>
+<p>ชนทั้งหมด (ครั้ง)</p>
 </div>
-
 <div class="stat-box">
-<h2>1</h2>
+<h2>2</h2>
+<p>ชนะ</p>
+</div>
+<div class="stat-box">
+<h2>0</h2>
 <p>เสมอ</p>
 </div>
-
 <div class="stat-box">
-<h2>83%</h2>
-<p>อัตราชนะ</p>
+<h2>0</h2>
+<p>แพ้</p>
 </div>
-
 </div>
 
 <table>
 <tr>
-<th>ครั้ง</th>
-<th>วันที่</th>
-<th>คู่ชน</th>
-<th>ผล</th>
+<th style="width: 12%;">ครั้งที่</th>
+<th style="width: 25%;">วันที่</th>
+<th style="width: 25%;">คู่ชน</th>
+<th style="width: 23%;">สนาม</th>
+<th style="width: 15%;">ผล</th>
 </tr>
-
 <tr>
 <td>1</td>
-<td>10/01/2569</td>
-<td>ลังสาดนำโชค</td>
-<td>ชนะ</td>
+<td>18/04/2568</td>
+<td>ลังสาดปานเพชร</td>
+<td>สนามชนโคบ้านเสาธง</td>
+<td style="color: #00ff00; font-weight: bold;">ชนะ</td>
 </tr>
-
 <tr>
 <td>2</td>
-<td>15/03/2569</td>
-<td>ดุกด้างเพชรทอง</td>
-<td>ชนะ</td>
+<td>13/03/2569</td>
+<td>แดงงามสิงห์โตทอง</td>
+<td>สนามชนโคบ้านเสาธง</td>
+<td style="color: #00ff00; font-weight: bold;">ชนะ</td>
 </tr>
-
 </table>
 
 </div>
 </section>
 
-<section id="gallery">
+<section id="awards">
 <div class="container">
-<h1>คลังรูปภาพ</h1>
-
-<div class="gallery">
-<img src="img1.jpg">
-<img src="img2.jpg">
-<img src="img3.jpg">
-<img src="img4.jpg">
-</div>
-
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-<h1>ติดต่อ</h1>
-
+<h1>ผลงาน</h1>
 <div class="card">
-<p>📞 08X-XXX-XXXX</p>
-<p>📘 Facebook : ชื่อเพจ</p>
-<p>📍 จังหวัด...</p>
+<ul>
+<li>แชมป์รายการ -</li>
+<li>ชนะติดต่อกัน 2 ครั้ง</li>
+<li>รางวัลพิเศษ -</li>
+</ul>
 </div>
-
 </div>
 </section>
 
