@@ -44,8 +44,8 @@ nav a:hover{
 
 .hero{
     height:100vh;
-    /* แก้ไขชื่อไฟล์รูปให้ตรงกับบน GitHub ของคุณ */
-    background:url('cow.jpg') center/cover; 
+    /* ปรับแต่งเพื่อให้รูปพื้นหลังแสดงผลพอดี ตรงกลาง และไม่ซ้ำซ้อน */
+    background: url('cow.jpg') center/cover no-repeat; 
     display:flex;
     justify-content:center;
     align-items:center;
@@ -132,7 +132,9 @@ table th{
 
 .gallery img{
     width:100%;
-    border-radius:10px;
+    aspect-ratio: 16/9; /* ล็อคอัตราส่วนรูปภาพให้สม่ำเสมอเท่ากัน */
+    object-fit: cover;   /* จัดรูปภาพให้พอดีกับกรอบโดยไม่ยืดหรือเบี้ยว */
+    border-radius: 10px;
 }
 
 footer{
@@ -238,7 +240,6 @@ footer{
 <div class="container">
 <h1>คลังรูปภาพ</h1>
 
-<!-- อย่าลืมอัปโหลดรูปภาพเหล่านี้ขึ้น GitHub หรือเปลี่ยนชื่อให้ตรงกับที่มีอยู่จริงนะครับ -->
 <div class="gallery">
 <img src="img1.jpg">
 <img src="img2.jpg">
@@ -255,7 +256,7 @@ footer{
 
 <div class="card">
 <p>📞 08X-XXX-XXXX</p>
-<p>📘 Facebook : ใส่ชื่อเพจตรงนี้</p>
+<p>📘 Facebook : ชื่อเพจ</p>
 <p>📍 จังหวัด...</p>
 </div>
 
@@ -267,5 +268,5 @@ footer{
 </footer>
 
 </body>
-  </html>
+</html>
 
